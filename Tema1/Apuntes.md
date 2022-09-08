@@ -108,7 +108,7 @@ Debéis instalar el JDK que estamos utilizando en clase, y el Netbeans en el equ
 
 ![Descripción de la imagen](img/imagen2.png)
 
-![Descripción de la imagen](img/Imagen3.png)
+![Descripción de la imagen](img/imagen3.png)
 
 ## PROGRAMACIÓN EN JAVA
 
