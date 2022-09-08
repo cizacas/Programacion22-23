@@ -98,12 +98,13 @@ En nuestro caso vamos a instalar el JDK 18.
 Para que un programador pueda llevar a cabo su tarea, dispone de herramientas para llevar a cabo su tarea. Lo más básico es tener un editor de texto donde escribir las instrucciones y un compilador que transforme el fichero de texto, con las sentencias de Java, en un fichero escrito en un lenguaje especial, capaz de ser interpretado por la Máquina Virtual de Java (JVM).
 
 También hay entornos de programación más sofisticados que proporcionan una enorme cantidad de funciones: editor de texto, ayuda, compilador, depurador y, en general, casi cualquier cosa que se nos pueda ocurrir. Estos entornos se conocen como IDE, las siglas en inglés de "entorno integrado de desarrollo".
-Tenemos varios entornos disponibles, algunos de código abierto y gratuitos. Un ejemplo puede ser NetBeans, o Eclipse. En este curso vamos a utilizar Eclipse y la página de descarga es la siguiente:
+Tenemos varios entornos disponibles, algunos de código abierto y gratuitos. Un ejemplo puede ser NetBeans, o Eclipse. En este curso vamos a utilizar NetBeans y la página de descarga es la siguiente:
 
-[Enlace a la página de Eclipse](https://www.eclipse.org/downloads/)
+[Enlace a la página de Netbeans](https://netbeans.apache.org/download/)
+
 
 ## TAREA PARA REALIZAR EN CASA
-Debéis instalar el JDK que estamos utilizando en clase, y el Eclipse en el equipo de casa. Tendréis que hacer capturas de pantalla donde se vea la fecha y hora para comprobar que la instalación está hecha, del estilo a estos dos recortes:
+Debéis instalar el JDK que estamos utilizando en clase, y el Netbeans en el equipo de casa. Tendréis que hacer capturas de pantalla donde se vea la fecha y hora para comprobar que la instalación está hecha, del estilo a estos dos recortes:
 
 ![Descripción de la imagen](img/imagen2.png)
 
@@ -131,6 +132,14 @@ código fuera del bloque
 ```
 ### Nuestro primer programa
 
+Los pasos a realizar son:
+
+1. Abrir el entorno NetBeans
+2. Selección la opción crear un proyecto nuevo, elegir la categoria "Java with Maven" y proyecto "Java Aplication"
+![opciones](img/imagen4.png)
+3. una vez seleccionado daremos nombre al proyecto,asignaremos un directorio donde estará el código que generemos 
+![pantalla con datos](img/imagen5.png)
+4. el código generado es:
 ```java
 public class PrimerPrograma
 {
@@ -175,6 +184,7 @@ tipo nombreVariable;
 ```
 Donde tipo es el tipo de datos que almacenará la variable (texto, números enteros,...) y nombreVariable es el nombre con el que se conocerá la variable. 
 Ejemplos:
+
 ```java
 int días; // días es un número entero, sin decimales
 boolean decisión; //decisión sólo puede ser verdadera o falsa
@@ -185,7 +195,7 @@ int días=365;
 ```
 Y se puede declarar más de una variable a la vez del mismo tipo en la misma línea si las separamos con comas:
 ```java
-int días=365, año=23, semanas;
+int días=365, ano=23, semanas;
 ```
 Al declarar una variable se puede incluso utilizar una expresión:
 ```java
@@ -231,7 +241,7 @@ En Java tenemos 8 tipos de datos primitivos:
 | char  | 8 | True o False |
 
 En este momento estamos en condiciones de hacer nuestro primer ejercicio en Java. Haremos el ejercicio 1 y el ejercicio 2 apartados a. y b. de la siguiente hoja de ejercicios:
-> Hoja de ejercicios 1
+:computer: Hoja de ejercicios 1
 
 
 #### Tipos de datos: Enteros
@@ -241,17 +251,17 @@ Los tipos byte, short, int y long sirven para almacenar datos enteros. Los enter
 Los números enteros se escriben tal cual, salvo si es de tipo long, que debemos poner al final la letra L mayúscula.
 
 No se acepta en general asignar variables de distinto tipo. Sí se pueden asignar valores de variables enteras a variables enteras de un tipo superior (por ejemplo asignar un valor int a una variable long). Pero al revés no se puede:
-```
+```java
 int i=12;
 byte b=i; //error de compilación, posible pérdida de precisión
 ```
 La solución es hacer un cast. Esta operación permite convertir valores de un tipo a otro. Se usa así:
-```
+```java
 int i=12;
 byte b=(byte) i; //El (cast) evita el error
 ```
 Hay que tener en cuenta en estos castings que si el valor asignado sobrepasa el rango del elemento, el valor convertido no tendrá ningún sentido ya que no puede almacenar todos los bits necesarios para representar ese número:
-```
+```java
 int i=1200;
 byte b=(byte) i; //El valor de b no tiene sentido
 ```
@@ -259,21 +269,22 @@ byte b=(byte) i; //El valor de b no tiene sentido
 #### Tipos de datos: Números en coma flotante
 
 Los decimales se almacenan en los tipos float y double. Los decimales no son almacenados de forma exacta, por eso siempre hay un posible error en la representación. Es más preciso el double que el float puesto que utiliza más bytes para representar un número. El separador decimal que tenemos que utilizar es el punto y no la coma.
-```
+
+```java
 x=2.75;
 ```
 A un valor se le puede añadir al final una f indicando que es un float. Se añade una d en caso de querer un double. En caso de no añadir nada se entiende que es un double.
 Lógicamente no se pueden asignar valores decimales a tipos de datos enteros:
-```
+```java
 int a = 7.5; //error
 ```
 Si podríamos mediante un cast:
-```
+```java
 int a = (int) 7.5;
 ```
 Pero se perderían los decimales. En el caso anterior a valdría 7
 El caso contrario sí se podría hacer:
-```
+```java
 int x = 9;
 double y = x; //correcto
 ```
@@ -282,7 +293,7 @@ Al declarar números (sean del tipo que sean), si no se indican valores iniciale
 #### Tipos de datos: booleanos
 
 Sirven para indicar si algo es verdadero (true) o falso (false). 
-```
+```java
 boolean b = false;
 ```
 Si al declarar un valor booleano no se le da valor inicial, se toma como valor inicial false.
@@ -290,7 +301,7 @@ Si al declarar un valor booleano no se le da valor inicial, se toma como valor i
 #### Tipos de datos: caracteres
 
 Los valores de tipo carácter sirven para almacenar símbolos de escritura.
-```
+```java
 char letra;
 letra=’C’; //Los caracteres van entre comillas
 letra=67; //El código Unicode de la C es el 67. Esta línea hace lo mismo que la anterior
@@ -310,30 +321,30 @@ También hay una serie de caracteres especiales que van precedidos por el símbo
 #### Conversión entre tipos (casting)
 
 Ya se ha comentado la necesidad de uso del operador de casting para poder realizar asignaciones entre tipos distintos. Como resumen véanse estos ejemplos:
-```
+```java
 int a; 
 byte b=12;  
 a=b;
 ```
 El código anterior es correcto porque un dato byte es más pequeño que uno int y Java le convertirá de forma implícita. Lo mismo pasa de int a double por ejemplo. Sin embargo en:
-```
+```java
 int a=1; 
 byte b; 
 b=a; //error
 ```
 El compilador devolverá error aunque el número 1 sea válido para un dato byte. Para ello hay que hacer un casting. Eso significa poner el tipo deseado entre paréntesis delante de la expresión.
-```
+```java
 int a=1; 
 byte b;
 b= (byte) a; //correcto
 ```
 En el siguiente ejemplo:
-```
+```java
 byte n1=100, n2=100, n3;
 n3= n1 * n2 /100; //error
 ```
 Aunque el resultado es 100, y ese resultado es válido para un tipo byte; lo que ocurrirá en realidad es un error. La multiplicación 100\*100 da como resultado 10000, es decir un número de tipo int. Aunque luego se divide entre 100, no se vuelve a convertir a byte; ya que ante cualquier operación el tipo resultante siempre se corresponde con el tipo más grande que intervenga en la operación. Lo correcto sería:
-```
+```java
 n3 = (byte) (n1 * n2 / 100);
 ```
 #### Ámbito de las variables
@@ -344,7 +355,7 @@ Toda variable tiene un ámbito. Esto es la parte del código en la que una varia
 3. Se la utiliza en diversas sentencias
 4. Cuando finaliza el bloque en el que fue declarada, la variable muere. Es decir, se libera el espacio que ocupa esa variable en memoria. No se la podrá volver a utilizar.
 Una vez que la variable ha sido eliminada, no se puede utilizar. Dicho de otro modo, no se puede utilizar una variable más allá del bloque en el que ha sido definida. Ejemplo:
-```
+```java
 {
 	int x=9;
 }
@@ -389,7 +400,7 @@ Tenemos los siguientes tipos:
 | --  | x--  | Decrementa x en 1. Evalúa antes. |
 | --  | --x  | Decrementa x en 1. Evalúa después |
 
-```
+```java
 int x = 5, y = 5; 
 System.out.println(++x); // imprime 6 
 System.out.println(x); // imprime 6 
@@ -445,7 +456,7 @@ System.out.println(y); // imprime 6
 Este operador devuelve un valor que se selecciona de dos posibles. La selección dependerá de la evaluación de uan expresión relacional o lógica que, como hemos visto, puede tomar dos valores: verdadero o falso.
 
 El operador tiene la siguiente sintáxis:
-```
+```java
 expresioncondicional ? valor1 : valor2
 ```
 
@@ -453,7 +464,7 @@ La evaluación de la expresión decidirá cuál de los dos posibles valores se d
 
 Ejemplo:
 
-```
+```java
 int a,b;
 a=3<5 ? 1 : -1; //3<5 es cierto: así que a toma el valor 1.
 b= a == 7 ?10:20; // a (que vale 1) == 7 es falso, así que b toma el valor 20
@@ -467,7 +478,7 @@ b= a == 7 ?10:20; // a (que vale 1) == 7 es falso, así que b toma el valor 20
 Una constante es una variable de sólo lectura. Dicho de otro modo más correcto, es un valor que no puede variar (por lo tanto no es una variable).
 
 La forma de declarar constantes es la misma que la de crear variables, sólo que hay que anteponer la palabra final que es la que indica que estamos declarando una constante y por tanto no podremos variar su valor inicial:
-```
+```java
 final double PI=3.141591;
 PI=4; //Error, no podemos cambiar el valor de PI
 ```
@@ -491,7 +502,7 @@ Instrucciones que podemos utilizar para escribir por pantalla:
 - System.out.print (System es el paquete donde se encuentra el método out.print que presenta información en pantalla. Al contrario que el método anterior, no realiza un salto de línea al acabar de escribir)
 - System.out.printf (System es el paquete donde se encuentra el método out.printf que presenta información en pantalla con un determinado formato)
 Ejemplos:
-```
+```java
 System.out.println("Hola, mi primer programa");
 System.out.println("\”Hola, mi primer programa\”");
 System.out.println("Hola, mi primer programa, está en c:\\");
@@ -507,7 +518,7 @@ La orden printf() utiliza unos códigos de conversión para indicar de qué tipo
 - %f: Escribe un número en punto flotante.
 - %e: Escribe un número en punto flotante en notación científica.
 Por ejemplo, si queremos escribir el número float 12345.1684 con el punto de los miles y sólo dos cifras decimales la orden sería:
-```
+```java
 System.out.printf("% ,.2f\n", 12345.1684);
 ```
 Esta orden mostraría el número 12.345,17 por pantalla.
@@ -518,11 +529,11 @@ La lectura de teclado, es más complicada que la escritura. Se puede hacer de tr
 1. Visualizando una caja por pantalla: 
 
 - Hay que incluir el paquete javax.swing y utilizar la clase JOptionPane:
-```
+```java
 import javax.swing.JOptionPane;
 ```
 Esta clase está pensada para manejar cuadros de diálogo. Uno de estos cuadros permite introducir datos y almacenarlos en una variable. Los datos que devuelve el diálogo, son de tipo String, por lo que habrá que recogerlos en una variable String y luego convertirlos al tipo de dato deseado.
-```
+```java
 String texto; //variable para almacenar los datos recogidos por la caja de texto
 int num;
 texto =JOptionPane.showInputDialog(“Escriba un numero”);
@@ -543,21 +554,21 @@ Con esta opción, se va a capturar el contenido de System.in, mediante el uso de
 - InputStreamReader: Captura los bytes del buffer (System.in) y los convierte a caracteres.
 - BufferedReader: Clase que proporciona un método que permite leer hasta el final de la línea.
 Código ejemplo:
-```
+```java
 InputStreamReader isr = new InputStreamReader(System.in);
 BufferedReader br = new BufferedReader(isr);
 System.out.print("Introduce el texto: ");
 String cad = br.readLine();
 ```
 En este caso, también habrá que hacer una conversión del tipo de dato String al tipo de dato que se desee:
-```
+```java
 int num = Integer.parseInt(cad));
 ```
 
 3. Usando la clase Scanner: 
 
 Java a partir de la versión 1.5, incorpora una nueva clase Scanner (import java.util.Scanner), la cual permite leer tipo de datos (int, float, String, etc.), a través de la consola de la aplicación. A continuación, se presenta un ejemplo de su utilización:
-```
+```java
 // Creamos objeto teclado
 Scanner teclado = new Scanner(System.in);
 // Declaramos variables a utilizar
@@ -584,14 +595,14 @@ La forma de declararlos es con la palabra reservada enum, seguida del nombre de 
 Definición: public enum <nomb_enum> {<lista_valores que toma>};
 Ejemplo: 
 
-```
+```java
 enum TamanoDeCafe{PEQUEÑO,MEDIANO,GRANDE};
 ```
 Para utilizarla, únicamente hará falta definir una variable del tipo de enumerado definido.
 Llamada: <nomb_enum> <nomb_variable_enum>;
 Ejemplo: 
 
-```
+```java
 TamanoDeCafe tdc;
 ```
 Una vez definida una variable del tipo de enumerado, se le podrá da a esta uno de los valores expecificados.
@@ -602,6 +613,6 @@ tdc = TamanoDeCafe.MEDIANO;
 ```
 
 ## HOJAS DE EJERCICIOS
-> Hoja de ejercicios 2
+:computer: Hoja de ejercicios 2
 
-> Hoja de ejercicios 3
+:computer: Hoja de ejercicios 3
