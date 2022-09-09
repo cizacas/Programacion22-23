@@ -213,7 +213,7 @@ Pero la asignación se puede utilizar en cualquier momento (tras haber declarado
 int x;
 x=7;
 x=x*2;
-```java
+```
 En Java siempre se asigna una valor inicial a las variables en cuanto se declaran. En el caso de los números es el cero.
 ```java
 int x; //x ya vale cero
