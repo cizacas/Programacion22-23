@@ -48,7 +48,7 @@ Si representáramos la Clase pez en un diagrama de clases UML (Notación UML: Es
 
 Veamos un ejemplo de como se representa una clase en lenguaje Java:
 
-```
+```java
 public class NombreClase
 {
   /**
@@ -78,7 +78,7 @@ public class NombreClase
 
 1. Intentad crear una clase Pez y codificar sus atributos y sus métodos.
 
-```
+```java
 public class Pez
 {
   private String color;
@@ -108,7 +108,7 @@ Podemos tener más de un constructor en nuestra clase, y se distinguirán por el
 
 El nombre del constructor, como ya habíamos dicho anteriormente, coincide con el nombre de la clase y no devuelve nada. Como esto siempre es así, no se indica que no devuelve nada. Los constructores se escriben inmediatamente después de la definición de los atributos. Completamos nuestra clase Pez:
 
-```
+```java
   //Constructor por defecto (sin parámetros)
   public Pez()
   {
@@ -139,12 +139,12 @@ Cada objeto tiene su propia identidad, es decir, tendrá un nombre único y no p
 
 Para utilizar un objeto primero se debe definir una variable que lo referenciará. El formato es el siguiente:
 
-```
+```java
 Clase variable
 ```
 Luego se debe crear el objeto (instancia de la clase), de la siguiente forma:
 
-```
+```java
 variable = new Constructor(lista de parámetros)
 ```
 
@@ -154,7 +154,7 @@ Nota:
 - Los datos de la lista de parámetros se separan por comas
 
 Mas ejemplos de creación de objetos de la clase Pez:
-```
+```java
 Pez carpa = new Pez();
 Pez grande = new Pez(50);
 Pez cometa = new Pez("Naranja", "Cometa", 8);
@@ -165,7 +165,7 @@ Pez cometa = new Pez("Naranja", "Cometa", 8);
 En todos los métodos existe por defecto una referencia al objeto concreto que ejecuta el método. Esta referencia es la palabra reservada __this__.
 Su utilidad es resolver ambigüedades cuando existen atributos con el mismo identificador que alguna variable local o parámetro. Veamos un ejemplo de su uso:
 
-```
+```java
 public class Pez
 {
   private int tamano;
@@ -181,7 +181,7 @@ public class Pez
 
 Sirven para obtener o para modificar los atributos de una clase
 
-```
+```java
 public String getColor(){
   return color;
 }
@@ -211,7 +211,7 @@ public void setTamano(int tamano){
 
 Se utiliza para acceder a los miembros de una clase
 
-```
+```java
 carpa.respirar();
 grande.alimentarse();
 pezCometa.respirar();
@@ -223,13 +223,13 @@ System.out.println("El color de la carpa es: "+ carpa.getColor());
 ```
 ## EJERCICIOS
 
-[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_02.pdf)
+:computer:Hoja de ejercicios 1
 
-[Hoja de ejercicios 2](Ejercicios/Hoja02_POO_02.pdf)
+:computer:Hoja de ejercicios 2
 
-[Hoja de ejercicios 3](Ejercicios/Hoja03_POO_02.pdf)
+:computer:Hoja de ejercicios 3
 
-[Hoja de ejercicios 4](Ejercicios/Hoja04_POO_02.pdf)
+:computer:Hoja de ejercicios 4
 
 ### Modificadores de acceso
 
@@ -244,7 +244,7 @@ Se trata de una palabra que antecede a la declaración de una clase, método o p
 
 El modificador debe de indicarse antes de indicar el tipo de datos de la propiedad o el método. Por ejemplo:
 
-```
+```java
 public class Noria
 {
   private double radio;
@@ -265,7 +265,7 @@ public class Noria
 Cuando se definen los datos de una determinada clase, se debe indicar el tipo de atributo que es (String, int, double, ...) y el especificador de acceso (public, private,...). 
 Ejemplo:
 
-```
+```java
 public class Persona
 {
   public String nombre; //se puede acceder desde cualquier clase
@@ -280,7 +280,7 @@ Por lo general los atributos de una clase suelen ser privados o protegidos, a no
 
 Los atributos de una clase pueden utilizar el modificador final, para que se conviertan en valores no modificables en el objeto. De ser así, se debe iniciar el valor del atributo en la construcción del objeto
 
-```
+```java
 public class Alumno 
 {
     private final String INSTITUTO = "Miguel Herrero";
@@ -302,7 +302,7 @@ Para construir un método necesitamos definir:
 4. **Los parámetros**: pueden necesitar datos para realizar su tarea. 
 5. **El cuerpo del método**: el código que permite al método realizar su tarea.
 
-```
+```java
     public double sueldo()
     {
         double salario = 0;
@@ -325,7 +325,7 @@ Esto significa crear distintas variantes del mismo método. Se puede definir má
 
 Vemos un ejemplo:
 
-```
+```java
 public class Matematicas
 {
 	public double suma(double x, double y) 
@@ -352,7 +352,7 @@ Los posibles usos de this son:
 - **this.método(parámetros)**: permite llamar a un método del objeto actual con los parámetros indicados.
 - **this(parámetros)**: permite llamar a un constructor del objeto actual. Esta llamada sólo puede ser empleada en la primera línea de un constructor.
 
-```
+```java
 public class Punto 
 {
      private int posX;
@@ -376,14 +376,14 @@ Pero esta forma no suele ser la más habitual. En su lugar se utilizan los const
 
 Un constructor es un método que se invoca cuando se crea un objeto y que sirve para iniciar los atributos del objeto. Siempre hay al menos un constructor, el constructor por defecto. Ese es un constructor que le crea el compilador en caso de que nosotros no creemos ninguno y se invoca cuando la creación es como:
 
-```
+```java
 Alumno a=new Alumno();
 ```
 
 Pero nosotros podremos crear los nuestros. Un constructor no es más que un método que tiene el mismo nombre que la clase.
 
 Ejemplo 1. En este ejemplo se ve una clase con un constructor definido por el usuario, y el uso que se hace de el desde el programa principal.:
-```
+```java
 public class Noria 
 {
 	private double radio;
@@ -402,7 +402,7 @@ public class Principal
 ```
 En este caso, como tenemos un constructor definido por el usuario, no podríamos utilizar el constructor por defecto (el que no tiene parámetros). Si lo necesitáramos, tendríamos que definirlo en la clase. Vemos el ejemplo2:
 
-```
+```java
 public class Noria 
 {
 	private double radio;
@@ -429,7 +429,7 @@ public class Principal
 Existe otro tipo de constructor denominado **Constructor copia**. Recibe por argumento un objeto del mismo tipo, y le asigna los valores del objeto pasado por parámetro a la nueva instancia del objeto.
 Se utiliza para copiar un objeto en otro. Vemos un ejemplo:
 
-```
+```java
 public class Noria 
 {
 	private double radio;
@@ -460,7 +460,7 @@ Un método estático es aquel que no requiere de ningún objeto para ejecutarse 
 
 La forma de invocar un método estático es, en lugar de poniendo el nombre del objeto que realiza la llamada delante, se pone el nombre de la clase. Veamos un ejemplo:
 
-```
+```java
 public class Persona{
 	private String nombre;
 	public Persona(){
@@ -490,7 +490,7 @@ La recursividad es una técnica de escritura de métodos o funciones, pensada pa
 
 Como ejemplo vamos a ver la versión recursiva del factorial:
 
-```
+```java
 public class Matematicas
 {
      public double factorial(int n)
@@ -516,14 +516,14 @@ Con una llamada a ese método con factorial(4); usando el ejemplo anterior, la e
 
 ## EJERCICIOS
 
-[Hoja de ejercicios 5](Ejercicios/Hoja05_POO_02.pdf)
+:computer:Hoja de ejercicios 5
 
-[Hoja de ejercicios 6](Ejercicios/Hoja06_POO_02.pdf)
+:computer:Hoja de ejercicios 6
 
-[Hoja de ejercicios 7](Ejercicios/Hoja07_POO_02.pdf)
+:computer:Hoja de ejercicios 7
 
-[Hoja de ejercicios 8](Ejercicios/Hoja08_POO_02.pdf)
+:computer:Hoja de ejercicios 8
 
-[Hoja de ejercicios 9](Ejercicios/Hoja09_POO_02.pdf)
+:computer:Hoja de ejercicios 9
 
 
