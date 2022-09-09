@@ -126,7 +126,7 @@ else if (x==3)
 ```
 ## EJERCICIOS
 
-[Hoja de ejercicios 1](Ejercicios/Hoja01_Estructuras_03.pdf)
+:computer:Hoja de ejercicios 1
 
 ### SWITCH
 
@@ -234,7 +234,7 @@ switch (diasemana)
 
 ## EJERCICIOS
 
-[Hoja de ejercicios 2](Ejercicios/Hoja02_Estructuras_03.pdf)
+:computer:Hoja de ejercicios 2
 
 ### WHILE - Sentencia repetitiva mientras
 
@@ -346,7 +346,7 @@ Ejercicio para hacer: Intenta codificar el ejemplo anterior utilizando una estru
 
 ## EJERCICIOS
 
-[Hoja de ejercicios 3](Ejercicios/Hoja03_Estructuras_03.pdf)
+:computer: Hoja de ejercicios 3
 
 ### FOR - Sentencia repetitiva para
 
@@ -393,7 +393,7 @@ Como se ha podido observar, es posible declarar la variable contadora dentro del
 
 ## EJERCICIOS
 
-[Hoja de ejercicios 4](Ejercicios/Hoja04_Estructuras_03.pdf)
+:computer: Hoja de ejercicios 4
 
 ## ANEXO DEL TEMA. BUCLES ANIDADOS
 
@@ -406,8 +406,8 @@ Se trata de usar una estructura de bucle dentro de otra ya existente. Estas pued
 Puedo anidar cualquier número de ellas unas dentro de otras, aunque lo más normal es no pasar de 3.
 
 Veamos este ejemplo. Calcular el factorial de n números introducidos por teclado. La introducción finaliza al introducir el 0.
-```
- 	Scanner entrada = new Scanner(System.in);
+```java
+ 	    Scanner entrada = new Scanner(System.in);
         int num, fact;
         
         //Intro datos
@@ -431,7 +431,7 @@ Veamos este ejemplo. Calcular el factorial de n números introducidos por teclad
 
 Veamos otro ejemplo. Dibujamos un cuadrado con * cuyo número de * por lado será pedido por teclado.
 
-```
+```java
 Scanner entrada = new Scanner(System.in);
         int numAsteriscosLado;
         System.out.print("Introduce el número de astericos por lado: ");
@@ -465,4 +465,4 @@ Scanner entrada = new Scanner(System.in);
 
 ## EJERCICIOS
 
-[Hoja de ejercicios 5](Ejercicios/Hoja05_Estructuras_03.pdf)
+:computer: Hoja de ejercicios 5
