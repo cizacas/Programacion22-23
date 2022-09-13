@@ -34,6 +34,7 @@
     - [Tipos enumerados](#tipos-enumerados)
   - [HOJAS DE EJERCICIOS](#hojas-de-ejercicios)
 
+<div class="page"/>
 
 ## INTRODUCCIÓN
 
@@ -83,6 +84,8 @@ Resumido en un esquema sería así:
         - Calcular la suma y guardar el resultado en la memoria
         - Imprimir el resultado por pantalla
 
+<div class="page"/>
+
 ## LENGUAJE JAVA Y ENTORNO DE DESARROLLO
 
 El lenguaje que vamos a utilizar es Java. Java es un lenguaje de programación que se desarrolló para satisfacer las nuevas necesidades que requería la creación de aplicaciones a principios de los 90. 
@@ -101,6 +104,8 @@ Se buscaban principalmente dos cosas:
     * Robusto y seguro
     * Arquitectura portable: gracias a la máquina virtual de Java
     * Multitarea
+
+<div class="page"/>
 
 ### Ejecución de programas en Java
 
@@ -137,6 +142,7 @@ Tenemos varios entornos disponibles, algunos de código abierto y gratuitos. Un 
 
 [Enlace a la página de Netbeans](https://netbeans.apache.org/download/)
 
+<div class="page"/>
 
 ## TAREA PARA REALIZAR EN CASA
 Debéis instalar el JDK que estamos utilizando en clase, y el Netbeans en el equipo de casa. Tendréis que hacer capturas de pantalla donde se vea la fecha y hora para comprobar que la instalación está hecha, del estilo a estos dos recortes:
@@ -144,6 +150,8 @@ Debéis instalar el JDK que estamos utilizando en clase, y el Netbeans en el equ
 ![Descripción de la imagen](img/imagen2.png)
 
 ![Descripción de la imagen](img/imagen3.png)
+
+<div class="page"/>
 
 ## PROGRAMACIÓN EN JAVA
 
@@ -195,6 +203,8 @@ Además, el archivo debería llamarse PrimerPrograma.java. Es recomendable que e
 
 También es aconsejable que el nombre del programa comience con una letra mayúscula y le sigan letras en minúsculas. Si consta de varias palabras no pueden utilizarse espacios en blanco.
 
+<div class="page"/>
+
 ### Paquetes en Java
 
 En cualquier lenguaje de programación existen librerías que contienen código ya escrito que nos facilita la creación de programas. En el caso de Java no se llaman librerías, sino paquetes. Los paquetes son una especie de carpetas que contienen clases ya preparadas y más paquetes.
@@ -228,6 +238,9 @@ También se puede hacer que la variable tome un valor inicial al declarar:
 ```java
 int días=365;
 ```
+
+<div class="page"/>
+
 Y se puede declarar más de una variable a la vez del mismo tipo en la misma línea si las separamos con comas:
 ```java
 int días=365, ano=23, semanas;
@@ -295,6 +308,8 @@ La solución es hacer un cast. Esta operación permite convertir valores de un t
 int i=12;
 byte b=(byte) i; //El (cast) evita el error
 ```
+<div class="page"/>
+
 Hay que tener en cuenta en estos castings que si el valor asignado sobrepasa el rango del elemento, el valor convertido no tendrá ningún sentido ya que no puede almacenar todos los bits necesarios para representar ese número:
 ```java
 int i=1200;
@@ -325,6 +340,8 @@ double y = x; //correcto
 ```
 Al declarar números (sean del tipo que sean), si no se indican valores iniciales, Java asigna el valor cero.
 
+<div class="page"/>
+
 #### Tipos de datos: booleanos
 
 Sirven para indicar si algo es verdadero (true) o falso (false). 
@@ -352,6 +369,8 @@ También hay una serie de caracteres especiales que van precedidos por el símbo
 | \"  | Dobles comillas  |
 | \'  | Comillas simples  |
 | \\  | Barra inclinada  |
+
+<div class="page"/>
 
 #### Conversión entre tipos (casting)
 
@@ -459,6 +478,8 @@ System.out.println(y); // imprime 6
 1. Realizar una aplicación que solicite al usuario su edad y le indique si es mayor de edad (mediante un booleano: true o false).
 2. Escribir un programa que pida un número al usuario e indique mediante un literal booleano si el número es par.
 
+<div class="page"/>
+
 #### Lógicos
 
 | Operador | Uso | Devuelve verdadero |
@@ -558,6 +579,8 @@ System.out.printf("% ,.2f\n", 12345.1684);
 ```
 Esta orden mostraría el número 12.345,17 por pantalla.
 
+<div class="page"/>
+
 ### Lectura por teclado
 
 La lectura de teclado, es más complicada que la escritura. Se puede hacer de tres formas distintas:
@@ -633,15 +656,20 @@ Ejemplo:
 ```java
 enum TamanoDeCafe{PEQUEÑO,MEDIANO,GRANDE};
 ```
+<div class="page"/>
+
 Para utilizarla, únicamente hará falta definir una variable del tipo de enumerado definido.
 Llamada: <nomb_enum> <nomb_variable_enum>;
+
 Ejemplo: 
 
 ```java
 TamanoDeCafe tdc;
 ```
 Una vez definida una variable del tipo de enumerado, se le podrá da a esta uno de los valores expecificados.
+
 Utilización: <nomb_variable_enum> = <nomb_enum>.<valor>
+
 Ejemplo: Posteriormente, al elegir un tamaño de café podemos hacerlo de la siguiente manera:
 ```java
 tdc = TamanoDeCafe.MEDIANO;
