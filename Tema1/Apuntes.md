@@ -38,7 +38,7 @@
 
 ## INTRODUCCIÓN
 
-¿Qué es un **programar**?
+¿Qué es **programar**?
 
 Programar es hacer programas. Obvio, ¿verdad? 
 
@@ -285,8 +285,8 @@ En Java tenemos 8 tipos de datos primitivos:
 | long  | 64  | -9.223.372.036.854.775.808 a 9.223.372.036.854.775.8087 |
 | float  | 32  | +/- 3.4E+38F (6-7 dígitos importantes) |
 | double  | 64  | +/- 1.8E+308 (15 dígitos importantes) |
-| boolean  | 16  | conjunto de caracteres UNICODE ISO |
-| char  | 8 | True o False |
+| boolean  | 16  | True o False |
+| char  | 8 | conjunto de caracteres UNICODE ISO|
 
 En este momento estamos en condiciones de hacer nuestro primer ejercicio en Java. Haremos el ejercicio 1 y el ejercicio 2 apartados a. y b. de la siguiente hoja de ejercicios:
 :computer: Hoja de ejercicios 1
@@ -323,7 +323,7 @@ Los decimales se almacenan en los tipos float y double. Los decimales no son alm
 ```java
 x=2.75;
 ```
-A un valor se le puede añadir al final una f indicando que es un float. Se añade una d en caso de querer un double. En caso de no añadir nada se entiende que es un double.
+A un valor se le puede añadir al final una __f__ indicando que es un float. Se añade una d en caso de querer un double. En caso de no añadir nada se entiende que es un double.
 Lógicamente no se pueden asignar valores decimales a tipos de datos enteros:
 ```java
 int a = 7.5; //error
@@ -397,7 +397,7 @@ En el siguiente ejemplo:
 byte n1=100, n2=100, n3;
 n3= n1 * n2 /100; //error
 ```
-Aunque el resultado es 100, y ese resultado es válido para un tipo byte; lo que ocurrirá en realidad es un error. La multiplicación 100\*100 da como resultado 10000, es decir un número de tipo int. Aunque luego se divide entre 100, no se vuelve a convertir a byte; ya que ante cualquier operación el tipo resultante siempre se corresponde con el tipo más grande que intervenga en la operación. Lo correcto sería:
+Aunque el resultado es 100, y ese resultado es válido para un tipo byte; lo que ocurrirá en realidad es un error. La multiplicación 100\*100 da como resultado 10000, es decir, un número de tipo int. Aunque luego se divide entre 100, no se vuelve a convertir a byte; ya que ante cualquier operación el tipo resultante siempre se corresponde con el tipo más grande que intervenga en la operación. Lo correcto sería:
 ```java
 n3 = (byte) (n1 * n2 / 100);
 ```
@@ -468,7 +468,7 @@ System.out.println(y); // imprime 6
 | ------------- | ------------- | ------------- |
 | >  | x>y  | x es mayor que y  |
 | >=  | x>=y  | x es mayor o igual que y |
-| <  | x<y  | x es menor que y |
+| <  | x< y  | x es menor que y |
 | <=  | x<=y | x es menor o igual que y |
 | == | x==y  | x es igual a y |
 | !=  | x!=y  | x es distinto de y |
@@ -505,7 +505,7 @@ System.out.println(y); // imprime 6
 
 **Realiza el siguiente ejercicio:**
 
-1. Un frutero necesita calcular los beneficios anuales que obtiene de la venta de manzanas y peras. Por este motivo, es necesario diseñar una aplicación que solicite las ventas (en kilos) de cada semestre para cadea fruta. La aplicación mostrará el importe total sabiendo que el precio del kilo de manzanas está fijado a 2.35€ y el kilo de peras en 1,95€.
+1. Un frutero necesita calcular los beneficios anuales que obtiene de la venta de manzanas y peras. Por este motivo, es necesario diseñar una aplicación que solicite las ventas (en kilos) de cada semestre para cadea fruta. La aplicación mostrará el importe total sabiendo que el precio del kilo de manzanas está fijado a 2,35€ y el kilo de peras en 1,95€.
 
 #### Ternario
 
