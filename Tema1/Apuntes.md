@@ -292,7 +292,7 @@ En Java tenemos 8 tipos de datos primitivos:
 
 Los tipos byte, short, int y long sirven para almacenar datos enteros. Los enteros son números sin decimales. 
 
-Los números enteros se escriben tal cual, salvo si es de tipo long, que debemos poner al final la letra L mayúscula.
+Los números enteros se escriben tal cual, salvo si es de tipo long, que debemos poner al final la letra __L mayúscula__.
 
 No se acepta en general asignar variables de distinto tipo. Sí se pueden asignar valores de variables enteras a variables enteras de un tipo superior (por ejemplo asignar un valor int a una variable long). Pero al revés no se puede:
 ```java
@@ -319,7 +319,7 @@ Los decimales se almacenan en los tipos float y double. Los decimales no son alm
 ```java
 x=2.75;
 ```
-A un valor se le puede añadir al final una __f__ indicando que es un float. Se añade una d en caso de querer un double. En caso de no añadir nada se entiende que es un double.
+A un valor se le puede añadir al final una __f__ indicando que es un float. Se añade una __d__ en caso de querer un double. En caso de no añadir nada se entiende que es un double.
 Lógicamente no se pueden asignar valores decimales a tipos de datos enteros:
 ```java
 int a = 7.5; //error
@@ -475,8 +475,8 @@ System.out.println(y); // imprime 6
 
 **Realiza los siguientes ejercicios:**
 
-1. Realizar una aplicación que solicite al usuario su edad y le indique si es mayor de edad (mediante un booleano: true o false).
-2. Escribir un programa que pida un número al usuario e indique mediante un literal booleano si el número es par.
+5. Realizar una aplicación que solicite al usuario su edad y le indique si es mayor de edad (mediante un booleano: true o false).
+6. Escribir un programa que pida un número al usuario e indique mediante un literal booleano si el número es par.
 
 <div class="page"/>
 
@@ -490,7 +490,7 @@ System.out.println(y); // imprime 6
 
 **Realiza el siguiente ejercicio:**
 
-1. Diseña un algoritmo que nos indique si podemos salir a la calle. Existen aspectos que influirán en esta decisión: si está lloviendo y si hemos terminado nuestras tareas. Solo podremos salir a la calle si no está lloviendo y hemos finalizado nuestras tareas. Existe una opción en la que, indistintamente de lo anterior, podremos salir a la calle: el hecho de que tengamos que ir a la biblioteca. Solicitar al usuario mediante booleano si llueve, si ha finalizado las tareas y si necesita ir a la biblioteca. El algoritmo debe mostrar mediante booleano si es posible que se le otorgue el permiso de salir a la calle.
+7. Diseña un algoritmo que nos indique si podemos salir a la calle. Existen aspectos que influirán en esta decisión: si está lloviendo y si hemos terminado nuestras tareas. Solo podremos salir a la calle si no está lloviendo y hemos finalizado nuestras tareas. Existe una opción en la que, indistintamente de lo anterior, podremos salir a la calle: el hecho de que tengamos que ir a la biblioteca. Solicitar al usuario mediante booleano si llueve, si ha finalizado las tareas y si necesita ir a la biblioteca. El algoritmo debe mostrar mediante booleano si es posible que se le otorgue el permiso de salir a la calle.
 
 
 #### De asignación
@@ -505,7 +505,7 @@ System.out.println(y); // imprime 6
 
 **Realiza el siguiente ejercicio:**
 
-1. Un frutero necesita calcular los beneficios anuales que obtiene de la venta de manzanas y peras. Por este motivo, es necesario diseñar una aplicación que solicite las ventas (en kilos) de cada semestre para cadea fruta. La aplicación mostrará el importe total sabiendo que el precio del kilo de manzanas está fijado a 2,35€ y el kilo de peras en 1,95€.
+8. Un frutero necesita calcular los beneficios anuales que obtiene de la venta de manzanas y peras. Por este motivo, es necesario diseñar una aplicación que solicite las ventas (en kilos) de cada semestre para cada fruta. La aplicación mostrará el importe total sabiendo que el precio del kilo de manzanas está fijado a 2,35€ y el kilo de peras en 1,95€.
 
 #### Ternario
 
@@ -527,7 +527,7 @@ b= a == 7 ?10:20; // a (que vale 1) == 7 es falso, así que b toma el valor 20
 ```
 **Realiza el siguiente ejercicio:**
 
-1. Escribir un programa que pida un número al usuario y muestre su valor absoluto.
+9. Escribir un programa que pida un número al usuario y muestre su valor absoluto.
 
 ### Constantes
 
