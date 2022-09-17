@@ -288,10 +288,6 @@ En Java tenemos 8 tipos de datos primitivos:
 | boolean  | 16  | True o False |
 | char  | 8 | conjunto de caracteres UNICODE ISO|
 
-En este momento estamos en condiciones de hacer nuestro primer ejercicio en Java. Haremos el ejercicio 1 y el ejercicio 2 apartados a. y b. de la siguiente hoja de ejercicios:
-:computer: Hoja de ejercicios 1
-
-
 #### Tipos de datos: Enteros
 
 Los tipos byte, short, int y long sirven para almacenar datos enteros. Los enteros son números sin decimales. 
@@ -369,6 +365,10 @@ También hay una serie de caracteres especiales que van precedidos por el símbo
 | \"  | Dobles comillas  |
 | \'  | Comillas simples  |
 | \\  | Barra inclinada  |
+
+En este momento estamos en condiciones de hacer nuestro primer ejercicio en Java. Haremos el ejercicio 1 y el ejercicio 2 apartados a. y b. de la siguiente hoja de ejercicios:
+
+:computer: Hoja de ejercicios 1
 
 <div class="page"/>
 
