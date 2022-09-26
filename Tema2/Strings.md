@@ -1,5 +1,16 @@
 # CADENAS DE TEXTO EN JAVA.
 
+## ÍNDICE
+  - [INTRODUCCIÓN](#introducción)
+    - [Creación](#creación)
+    - [Asignación de valores](#asignación-de-valores)
+    - [Extracción de un carácter individual](#extracción-de-un-carácter-individual)
+    - [Obtener la longitud de la cadena](#obtener-la-longitud-de-la-cadena)
+    - [Descomposición de una cadena](#descomposición-de-una-cadena)
+    - [Igualdad de dos cadenas](#igualdad-de-dos-cadenas)
+    - [Otras funciones de Strings](#otras-funciones-de-strings)
+  - [EJERCICIOS](#ejercicios)
+
 ## INTRODUCCIÓN
 
 La clase String nos permitirá almacenar cadenas de caracteres.Realmente es una secuencia de 0 a n caracteres. Es dinámica, por lo tanto le podemos asignar diferentes valores (cadenas), con diferente tamaño. Esto se debe a la asignación dinámica que se hace en memoria.
@@ -135,6 +146,6 @@ Como ya hemos comentado, existen muchas más funciones que podeis probar e inves
 
 ## EJERCICIOS
 
-[Hoja de ejercicios 1](Ejercicios/Hoja01_POO_String02.pdf)
+:computer: Hoja de ejercicios 1
 
 

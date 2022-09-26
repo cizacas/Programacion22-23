@@ -1,5 +1,29 @@
 # UNIDAD 2. UTILIZACIÓN DE OBJETOS Y DESARROLLO DE CLASES
 
+## ÍNDICE
+  - [INTRODUCCIÓN](#introducción)
+  - [JAVA Y LA PROGRAMACIÓN ORIENTADA A OBJETOS (POO)](#java-y-la-programación-orientada-a-objetos-poo)
+    - [Elementos de la POO: clases y objetos.](#elementos-de-la-poo-clases-y-objetos)
+      - [Constructor](#constructor)
+    - [Uso de clases y objetos](#uso-de-clases-y-objetos)
+    - [La palabra reservada this](#la-palabra-reservada-this)
+    - [Métodos get y set](#métodos-get-y-set)
+    - [Operador "."](#operador-)
+  - [EJERCICIOS](#ejercicios)
+    - [Modificadores de acceso](#modificadores-de-acceso)
+    - [Definir atributos](#definir-atributos)
+    - [Atributos finales](#atributos-finales)
+    - [Definir métodos](#definir-métodos)
+    - [Sobrecarga de métodos](#sobrecarga-de-métodos)
+    - [La referencia this](#la-referencia-this)
+    - [Constructores](#constructores)
+      - [Constructor copia](#constructor-copia)
+    - [Métodos estáticos](#métodos-estáticos)
+    - [Métodos recursivos](#métodos-recursivos)
+  - [EJERCICIOS](#ejercicios-1)
+  
+<div class="page"/>
+
 ## INTRODUCCIÓN
 
 Un paradigma es una forma de afrontar la construcción del software. O dicho con otras palabras, es una manera o estilo de programación de software. Existen diferentes formas de diseñar un lenguaje de programación y varios modos de trabajar para obtener los resultados que necesitan los programadores.
@@ -40,7 +64,7 @@ Una clase es el “plano” que permite “construir” un objeto y está compue
 - Atributos: Define sus propiedades (datos que almacena el objeto)
 - Métodos: Define el código de sus métodos (comportamiento)
 
-Dentro de la clase, existen unos métodos especiales denominados **constructores** que se utilizan cuando creamos un objeto a partir de una clase. A esta operación de crear el objeto también se la denomina instanciación del objeto. Los constructores tienen el mismo nombre de la clase.
+Dentro de la clase, existen unos métodos especiales denominados **constructores** que se utilizan cuando creamos un objeto a partir de una clase. A esta operación de crear el objeto también se la denomina **instanciación del objeto**. Los constructores tienen el mismo nombre de la clase.
 
 Si representáramos la Clase pez en un diagrama de clases UML (Notación UML: Es un lenguaje de modelado de sistemas software. Entre otras cosas, se utiliza para representar diagramas de clases)
 
@@ -78,6 +102,8 @@ public class NombreClase
 
 1. Intentad crear una clase Pez y codificar sus atributos y sus métodos.
 
+
+
 ```java
 public class Pez
 {
@@ -102,7 +128,7 @@ public class Pez
 
 #### Constructor
 
-Una vez que ya tenemos hecha la clase Pez, vamos a ir completandola con un constructor. Como ya habíamos dicho, un constructor es un método especial que se utiliza para inicializar un objeto. 
+Una vez que ya tenemos hecha la clase Pez, vamos a ir completándola con un constructor. Como ya habíamos dicho, un constructor es un método especial que se utiliza para inicializar un objeto. 
 
 Podemos tener más de un constructor en nuestra clase, y se distinguirán por el número de parámetros que tengan. A esta propiedad de poder tener más un método que se llama igual a otros se denomina **sobrecarga**.
 
@@ -221,6 +247,7 @@ carpa.setColor("Naranja");
 carpa.setTamaño(30);
 System.out.println("El color de la carpa es: "+ carpa.getColor());
 ```
+
 ## EJERCICIOS
 
 :computer:Hoja de ejercicios 1
@@ -275,6 +302,8 @@ public class Persona
 ```
 
 Por lo general los atributos de una clase suelen ser privados o protegidos, a no ser que se trate de un valor constante, en cuyo caso se declararán como públicos. Además pueden ser inicializados.
+
+<div class="page"/>
 
 ### Atributos finales
 
@@ -513,6 +542,7 @@ Con una llamada a ese método con factorial(4); usando el ejemplo anterior, la e
 - Eso hace que la llamada factorial(2) devuelva 2\*1, es decir 2
 - Eso hace que la llamada factorial(3) devuelva 3\*2, es decir 6
 - Por lo que la llamada factorial(4) devuelve 4\*6, es decir 24 Y ese es ya el resultado final
+
 
 ## EJERCICIOS
 
