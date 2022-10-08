@@ -54,7 +54,7 @@ public class usoString{
     
     char c=ciclo.charAt(0);
     System.out.println("El primer caracter de ciclo es: "+c);
-    System.out.println("El quinto caracter de ciclo es: "+charAt(4));
+    System.out.println("El quinto caracter de ciclo es: "+ciclo.charAt(4));
   }
 }
 ```
@@ -68,12 +68,7 @@ public class usoString{
   public static void main(String[] args){
     String modulo="programación";
     String ciclo= new String();
-    ciclo="Desarrollo de Aplicaciones Web";
-    
-    char c=ciclo.charAt(0);
-    System.out.println("El primer caracter de ciclo es: "+c);
-    System.out.println("El quinto caracter de ciclo es: "+charAt(4));
-    
+    ciclo="Desarrollo de Aplicaciones Web";  
     System.out.println("*****Longitud de la cadena*****);
     System.out.println("La longitud de la cadena ciclo es: "+ciclo.length());
   }
@@ -89,8 +84,6 @@ posFin es el número de elementos que quieras recuperar desde la posición inici
 ```java
 System.out.println("*****Extraccion de una subcadena*****");
 System.out.println("Subcadena de la cadena ciclo de las cuatro primeras caracteres que podemos nombrar como 0, 1, 2, 3 (el número de caracteres es cuatro). El carácter final indicado en la llamada al método, el número 4, queda excluido del substring.: "+ciclo.substring(0,4);
-System.out.println("Subcadena web (el número de caracteres es cuatro). El carácter final indicado en la llamada al método, el número 4, queda excluido del substring.: "+ciclo.substring(0,4);
-
 
 ```
 
@@ -133,14 +126,14 @@ else
 
 Existen un montón de funciones para trabajar con Strings en Java. Si os vais a la API de Java, podéis buscar la clase String y veréis todas las que hay. Algunas de ellas son las siguientes:
 
-- startsWith(subcadena) y endsWith(subcadena): para comprobar si una cadena comienza o finaliza con una subcadena determinada.
-- trim(): elimina los espacios en blanco de una cadena que tenga por delante o por detrás. No elimina los espacios intermedios.
-- toUpperCase() y to LowerCase(): me permite cambiar todos los caracteres por mayúsculas o minúsculas.
-- indexOf(cadenaABuscar): permite buscar una cadena dentro de otra.
-- indexOf(cadenaABuscar,posicion): igual que la anterior, pero desde una posición determinada.
-- replace(cadenaABuscar, cadenaSustituta): permite reemplazar una cadena por otra.
-- lastIndexOf (String cad): Retorna la posición de la ultima ocurrencia de la cadena dada como parámetro.
-- lastIndexOf (String cad,int ini): Retorna la posición de la última ocurrencia de la cadena dada como parámetro buscando en retroceso a partir de la posición dada como parámetro.
+- **startsWith(subcadena)** y **endsWith(subcadena)**: para comprobar si una cadena comienza o finaliza con una subcadena determinada.
+- **trim()**: elimina los espacios en blanco de una cadena que tenga por delante o por detrás. No elimina los espacios intermedios.
+- **toUpperCase()** y **toLowerCase()**: me permite cambiar todos los caracteres por mayúsculas o minúsculas.
+- **indexOf(cadenaABuscar)**: permite buscar una cadena dentro de otra.
+- **indexOf(cadenaABuscar,posicion)**: igual que la anterior, pero desde una posición determinada.
+- **replace(cadenaABuscar, cadenaSustituta)**: permite reemplazar una cadena por otra.
+- **lastIndexOf (String cad)**: Retorna la posición de la ultima ocurrencia de la cadena dada como parámetro.
+- **lastIndexOf (String cad,int ini)**: Retorna la posición de la última ocurrencia de la cadena dada como parámetro buscando en retroceso a partir de la posición dada como parámetro.
 
 Como ya hemos comentado, existen muchas más funciones que podeis probar e investigar por vuestra cuenta.
 
