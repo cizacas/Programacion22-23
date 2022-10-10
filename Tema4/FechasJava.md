@@ -1,4 +1,16 @@
 # FECHAS EN JAVA
+
+## ÍNDICE
+
+  - [Localización](#localización)
+  - [LocalDate](#localdate)
+  - [LocalTime](#localtime)
+  - [LocalDateTime](#localdatetime)
+  - [Period](#period)
+  - [Duration](#duration)
+  - [DateTimeFormatter](#datetimeformatter)
+  - [EJERCICIOS](#ejercicios)
+## Localización
 En el paquete **java.time** resolvemos los problemas con :
 -**fechas** con **LocalDate**
 -**horas** con **LocalTime**
@@ -106,3 +118,6 @@ System.out.println("Introduce la fecha con formato dd-mm-yyyy:");
 DateTimeFormatter f= DateTimeFormatter.ofPattern("dd-MM-yyyy");
 LocalDate fecha=LocalDate.parse(teclado.nextLine(), f);
 ```
+## EJERCICIOS
+
+:computer: Hoja de ejercicios 1
