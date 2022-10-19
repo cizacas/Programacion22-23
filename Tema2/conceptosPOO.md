@@ -94,26 +94,30 @@ Al derivar todos de la **clase Persona** todos pueden hablar, y al llamar al **m
  La realización de un **diseño modular** consiste en **descomponer** el sistema en **módulos (clases)**.
 
 Criterios para valorar un diseño modular:
-• **Cohesión**: grado de relación entre los elementos de cada módulo
-• **Acoplamiento**: grado de interrelación entre los distintos módulos
+
+- **Cohesión**: grado de relación entre los elementos de cada módulo
+- **Acoplamiento**: grado de interrelación entre los distintos módulos
 
 >Buen diseño => alta cohesión y bajo acoplamiento
 
 **Alta cohesión en la POO**:
-• Cada **clase** del sistema se refiere a **una única entidad**, es decir, puede **describirse con un único nombre**
-• Cada **método** realiza **una única tarea**, es decir, lo que hace puede **describirse con una única frase**
+
+- Cada **clase** del sistema se refiere a **una única entidad**, es decir, puede **describirse con un único nombre**
+- Cada **método** realiza **una única tarea**, es decir, lo que hace puede **describirse con una única frase**
 
 **Bajo acoplamiento en la POO**:
-• Las clases son lo más independientes posible entre sí, sólo utilizan métodos y manejan objetos de un pequeño conjunto de clases
-• Cada clase tiene una parte pública pequeña y bien definida para usar una clase no es necesario conocer detalles de su implementación
+- Las clases son lo más independientes posible entre sí, sólo utilizan métodos y manejan objetos de un pequeño conjunto de clases
+- Cada clase tiene una parte pública pequeña y bien definida para usar una clase no es necesario conocer detalles de su implementación
 
 Ventajas Un buen diseño con alta cohesión y bajo acoplamiento:
-• Facilita la comprensión del código, implica que la arquitectura es más sencilla
-• Facilita el mantenimiento, el código afectado al corregir un error o añadir una nueva funcionalidad se encuentra localizado en unas pocas clases.
-• Posibilita la reutilización del software, al tener un propósito claro y ser (casi) independientes, es fácil reutilizar clases entre distintas aplicaciones
-• Facilita la prueba de las clases, cada clase realiza un conjunto de tareas que pueden ser probadas de forma (casi) independiente de las demás clases
+- Facilita la comprensión del código, implica que la arquitectura es más sencilla
+- Facilita el mantenimiento, el código afectado al corregir un error o añadir una nueva funcionalidad se encuentra localizado en unas pocas clases.
+- Posibilita la reutilización del software, al tener un propósito claro y ser (casi) independientes, es fácil reutilizar clases entre distintas aplicaciones
+- Facilita la prueba de las clases, cada clase realiza un conjunto de tareas que pueden ser probadas de forma (casi) independiente de las demás clases
 
 Siguiendo el ejemplo nuestros métodos solo realizan una tarea hablar, caminar, abordar y cada una de estas acciones son distintas. 
 
+Fuentes:
 [Resumen de Programación en lenguaje Java.Tema 7. Modularidad](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjBv7_Q8Ov6AhVMQRoKHdM2AuUQFnoECA0QAQ&url=https%3A%2F%2Focw.unican.es%2Fpluginfile.php%2F293%2Fcourse%2Fsection%2F228%2Fcap7-modularidad.pdf&usg=AOvVaw3cQ1GnxH3o3GODs9KRlz6H)
+
 [Resumen del artículo de José Manuel Alarcón](https://www.campusmvp.es/recursos/post/los-conceptos-fundamentales-sobre-programacion-orientada-objetos-explicados-de-manera-simple.aspx) 
