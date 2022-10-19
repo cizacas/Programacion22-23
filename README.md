@@ -13,7 +13,7 @@ Apuntes de programación del CFGS de Desarrollo de Aplicaciones Web.
   
   [Cadenas en Java.](Tema2/Strings.md)
 
-  [Conceptos de la POO](Tema2/conceptosPOO.md)
+  [Conceptos de la POO.](Tema2/conceptosPOO.md)
  
   [Apuntes de la Unidad 2.](Tema2/Apuntes.md)
  
