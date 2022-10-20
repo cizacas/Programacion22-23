@@ -162,7 +162,7 @@ Se usa comúnmente para iterar sobre un array o una clase de colecciones.
 
 Sintaxis:
 ```java
-for (tipo    variable: array)
+for (tipo variable: array)
 	{
 		declaraciones usando variable;
 	}
@@ -203,8 +203,8 @@ notas es un array que contiene arrays de enteros. La primera dimensión podría 
 Como ocurre con los arrays unidimensionales, hasta que no se define el array con el operador **new**, no se puede utilizar el array en el código. 
 Ejemplo:
 ```java
-notas = new int[3][12]; 	//notas está compuesto por 3 arrays  de 12 numeros cada uno
-notas[0][0]=9; 		//el primer valor es un 9 
+notas = new int[3][12]; //notas está compuesto por 3 arrays  de 12 numeros cada uno
+notas[0][0]=9; //el primer valor es un 9 
 ```
 Los arrays multidimensionales se pueden inicializar de forma más creativa incluso.
 Ejemplo
@@ -231,11 +231,15 @@ El uso más común de los arrays es para organizar la información de objetos de
 
 Ejemplo:
 Si utilizamos una **clase Alumno** para almacenar la información de alumnos (con los atributos nombre, apellidos, nota y fecha de nacimiento). 
+
 La representación en UML de la clase Alumno es:
+
 ![diagrama uml de la clase alumno](img/umlalumno.png)
 
 y una clase grupo que simulará  un grupo de alumnos, nuestra clase tendrá un array de objetos del tipo creado anteriormente (Alumno).
+
 La representación en UML de la clase Grupo es:
+
 ![diagrama uml de la clase grupo](img/umlgrupo.png)
 
 Con el uso de un array podemos definir también el objeto apropiado para gestionar la información de un grupo de alumnos.
