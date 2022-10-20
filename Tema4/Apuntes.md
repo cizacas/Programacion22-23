@@ -242,9 +242,7 @@ La representación en UML de la clase Grupo es:
 
 ![diagrama uml de la clase grupo](img/umlgrupo.png)
 
-Con el uso de un array podemos definir también el objeto apropiado para gestionar la información de un grupo de alumnos.
-
-El ejemplo en java es:
+Con el uso de un array podemos definir también el objeto apropiado para gestionar la información de un grupo de alumnos. Ejemplo:
 
 ```java
 public class Grupo {
