@@ -8,16 +8,16 @@ Hasta ahora conocemos los tipos de datos simples. Con ellos no podemos gestionar
 **Pregunta**:
 ¿Cómo tendríamos que hacer ahora si queremos almacenar la nota de 30 alumnos de clase?
 - En la mayoría de los lenguajes se pueden agrupar variables del mismo tipo en una misma estructura conocida como **array**.
-- **Los arrays** son una **colección de datos del mismo tipo** al que se le pone un nombre (por ejemplo notas). Para acceder a un dato individual de la colección hay que utilizar su posición. La posición es un número entero, normalmente se le llama **índice**
-- por ejemplo notas[4] es el nombre que recibe el quinto elemento de la sucesión de notas.
-- Hay que tener en cuenta que en los arrays el primer elemento tiene como índice el número cero.
+- **Los arrays** son una **colección de datos del mismo tipo** al que se le pone un nombre (por ejemplo notas). Para acceder a un dato individual de la colección hay que utilizar su posición. 
+- La posición es un número entero, normalmente se le llama **índice**
+- Hay que tener en cuenta que en los arrays el primer elemento tiene como índice el**número cero**.
 - En Java los arrays son **OBJETOS**.
 
 si tenemos el siguiente ejemplo 
 
 ![array de notas](img/arraynotas.png)
-¿Cómo accederemos al valor 4?
-¿Qué obtendremos si hacemos nota[8]?
+
+>Preguntas: ¿Cómo accederemos al valor 4? ¿Qué obtendremos si hacemos nota[8]?
 
 ## ARRAYS UNIDIMENSIONALES
 
@@ -26,7 +26,7 @@ Para declarar un array en Java podremos hacerlo del siguiente modo:
 ```java
 	tipo[] nombre;
 ```
-Ejemplo
+Ejemplo:
 ```java
 	 double[] notas;
 ```
@@ -51,17 +51,15 @@ También se pueden asignar valores al array en la propia declaración:
 ```java
 double[] notas = {3.0, 5.2, 8, 0.5} //Esto creará un array de 4 elementos
 ```
-Preguntas:
-¿Cuánto valdrá notas[1]?
-¿Y notas[4]?
+>Preguntas: ¿Cuánto valdrá notas[1]? ¿Y notas[4]?
 
 Se pueden declarar arrays a cualquier tipo de datos (enteros, booleanos, doubles, ... e incluso objetos como se verá más adelante).
 
-La ventaja de usar arrays es que gracias a un simple bucle for se puede recorrer fácilmente todos los elementos de un array.
+La ventaja de usar arrays es que gracias a un simple **bucle for** se puede recorrer fácilmente todos los elementos de un array.
 
 ### Longitud
 
-Los arrays poseen un método que permite determinar cuánto mide un array; es decir, de cuántos elementos consta. Se trata de length. 
+Los arrays poseen un método que permite determinar cuánto mide un array; es decir, de cuántos elementos consta. Se trata de **length**. 
 ```java
 int a[]=new int [17]; 
 System.out.println(a.length); //Escribe: 17 
@@ -92,7 +90,7 @@ int notas[]=new notas[16];
 …
 notas=new notas[25]; 
 ```
-Pregunta:¿Qué os parece que harán las sentencias anteriores?
+>Pregunta:¿Qué os parece que harán las sentencias anteriores?
 
 El segundo **new** hace que se pierda el contenido anterior. De hecho elimina ese contenido. 
 En Java, un array es una referencia a una serie de valores que se almacenan en la memoria. El operador new asigna un hueco en memoria para almacenar una cantidad de elementos y devuelve una referencia a los valores.
