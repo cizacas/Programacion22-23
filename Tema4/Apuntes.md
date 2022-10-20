@@ -390,7 +390,7 @@ class HolaMundo
 
 ![compilación de java](img/compilacion.png)
 
-- la compilación nos crea el fichero .class y ejecutamos el programa -> java
+- La compilación nos crea el fichero .class y ejecutamos el programa -> java
   
 ![ejecución de java](img/ejecucion.png)
 
