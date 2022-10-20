@@ -10,10 +10,10 @@ Hasta ahora conocemos los tipos de datos simples. Con ellos no podemos gestionar
 - En la mayoría de los lenguajes se pueden agrupar variables del mismo tipo en una misma estructura conocida como **array**.
 - **Los arrays** son una **colección de datos del mismo tipo** al que se le pone un nombre (por ejemplo notas). Para acceder a un dato individual de la colección hay que utilizar su posición. 
 - La posición es un número entero, normalmente se le llama **índice**
-- Hay que tener en cuenta que en los arrays el primer elemento tiene como índice el**número cero**.
+- Hay que tener en cuenta que en los arrays el primer elemento tiene como índice el **número cero**.
 - En Java los arrays son **OBJETOS**.
 
-si tenemos el siguiente ejemplo 
+Si tenemos el siguiente array de notas
 
 ![array de notas](img/arraynotas.png)
 
@@ -120,7 +120,7 @@ b= a;
 b[0]=8; 
 System.out.println(a[0]);//Escribirá el número 8 
 ```
-El operador de igualdad (==) se puede utilizar con arrays, pero nuevamente no compara el contenido sino si las referencias señalan al mismo array:
+El operador de igualdad (==) se puede utilizar con arrays, pero nuevamente no compara el contenido sino las referencias que señalan al mismo array:
 ```java
 int a[]={3,3,3}; 
 int b[]={3,3,3}; 
