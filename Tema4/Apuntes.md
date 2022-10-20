@@ -2,6 +2,22 @@
 
 ## ÍNDICE
 
+  - [INTRODUCCIÓN](#introducción)
+  - [ARRAYS UNIDIMENSIONALES](#arrays-unidimensionales)
+    - [Declaración](#declaración)
+    - [Asignación](#asignación)
+    - [Longitud](#longitud)
+    - [inicialización](#inicialización)
+    - [Recorrido de un array ( FOR Y FOR-EACH)](#recorrido-de-un-array--for-y-for-each)
+      - [Recorrido de un array FOR-EACH](#recorrido-de-un-array-for-each)
+      - [Limitaciones del ciclo FOR-EACH](#limitaciones-del-ciclo-for-each)
+  - [ARRAYS MULTIDIMENSIONALES](#arrays-multidimensionales)
+  - [ARRAYS DE OBJETOS](#arrays-de-objetos)
+  - [LA CLASE ARRAYS DE JAVA](#la-clase-arrays-de-java)
+  - [MÉTODO MAIN](#método-main)
+    - [Uso por línea de comandos](#uso-por-línea-de-comandos)
+    - [Parámetros main - netbeans](#parámetros-main---netbeans)
+
 ## INTRODUCCIÓN
 
 Hasta ahora conocemos los tipos de datos simples. Con ellos no podemos gestionar muchos datos a la vez.
