@@ -357,8 +357,93 @@ public class Principal {
     
 }
 ```
-El **método main** siempre lo hemos situado en una clase independiente destinada exclusivamente a contener este método.
+- El **método main** siempre lo hemos situado en una clase independiente destinada exclusivamente a contener este método.
+- No es obligatorio. La clase con el **método main** podría tratarse como una clase más y el **método main** como un método más. 
+- Lo diferenciamos por motivos didácticos.
+- El método main() es usado por la JVM para iniciar la ejecución de cualquier programa Java. 
+- El método main será siempre un método público, ya que por su papel de iniciador de la aplicación no tendría sentido que fuera privado y por tanto inaccesible desde el exterior. 
+- El método main siempre es un método estático, ya que cuando se invoca por el motor en tiempo de ejecución, no existen objetos creados con anterioridad porque la ejecución del programa aún no ha comenzado. Si un programa no ha comenzado, existen clases pero no objetos 
+- main siempre devuelve void (nulo) ya que no se devuelve ningún valor.
+- Su parámetro de entrada siempre será un array de String. (String[] args). 
+
+### Uso por línea de comandos
+Java al igual que cualquier otro programa nos permite ejecutarlo mediante la línea de comandos, siguiendo los siguientes pasos:
+
+```java
+class HolaMundo 
+{
+	public static void main(String[] args) { 
+	
+		System.out.println("Hola mundo " +args[0] ); 
+	}
+}
+```
+-Comprueba que java está correctamente instalado y es accesible desde cualquier ruta. 
+
+![cmd version de java](img/javaversion.png)
+-Si no lo está descárgalo e inclúyelo en las variables de entorno del sistema. 
 
 
+![variables de entorno](img/variablesentorno.png)
 
+- Llama al compilador de java -> javac 
+
+![compilación de java](img/compilacion.png)
+
+- la compilación nos crea el fichero .class y ejecutamos el programa -> java
+  
+![ejecución de java](img/ejecucion.png)
+
+### Parámetros main - netbeans
+
+Se puede simular en NetBeans que nuestros programas reciben argumentos desde la línea de comandos.
+Para ello hay que ir a las propiedades del programa, en la pantalla de RUN.
+
+![simula cmd](img/simulacmd.png)
+
+Interpretamos los argumentos del main como **un array de String**.
+
+![argumentos de entrada al programa java](img/argumentos.png)
+
+El programa al que llama es:
+```java
+public class Ordenar {
+
+    public static void main(String[] args) {
+       
+       if (args.length>0){
+           Arrays.sort(args);//ordeno el array
+           System.out.println("imprimir los valores del array ordenado");
+           for (int i=0;i<args.length;i++){
+               System.out.println(args[i]);
+           }
+       }
+    }
+}
+```
+La salida del programa es 
+
+![resultado de la ejecución del programa](img/salida.png)
+
+La propiedad length del array args (args.length) contiene el número de valores enviados al programa.
+
+Siempre que trabajemos con valores recibidos desde la línea de comandos debemos controlar el número de valores recibidos para evitar que se produzcan errores al procesar el array.
+
+Ejemplo: visualizar los argumentos introducidos en la línea de comando
+
+```java
+public class MostarArgumentos {
+
+    public static void main(String[] args) {
+         if (args.length>0){
+           System.out.println("imprimir los valores pasados por línea");
+           for (int i=0;i<args.length;i++){
+               System.out.print(args[i]+" ");
+           }
+       }
+    }
+}
+```
+
+:computer: Hoja de ejercicios 8
 
