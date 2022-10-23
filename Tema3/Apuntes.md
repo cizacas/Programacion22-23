@@ -453,7 +453,8 @@ Veamos este ejemplo. Calcular el factorial de n números introducidos por teclad
 Veamos otro ejemplo. Dibujamos un cuadrado con * cuyo número de * por lado será pedido por teclado.
 
 ```java
-Scanner entrada = new Scanner(System.in);
+
+        Scanner entrada = new Scanner(System.in);
         int numAsteriscosLado;
         System.out.print("Introduce el número de astericos por lado: ");
         numAsteriscosLado=entrada.nextInt();
