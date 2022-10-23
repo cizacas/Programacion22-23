@@ -427,7 +427,8 @@ Puedo anidar cualquier número de ellas unas dentro de otras, aunque lo más nor
 
 Veamos este ejemplo. Calcular el factorial de n números introducidos por teclado. La introducción finaliza al introducir el 0.
 ```java
- 	    Scanner entrada = new Scanner(System.in);
+
+        Scanner entrada = new Scanner(System.in);
         int num, fact;
         
         //Intro datos
