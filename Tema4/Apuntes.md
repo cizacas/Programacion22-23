@@ -82,6 +82,8 @@ Los arrays poseen un método que permite determinar cuánto mide un array; es de
 int a[]=new int [17]; 
 System.out.println(a.length); //Escribe: 17 
 ```
+<div class="page"/>
+
 Gracias a este método el bucle de recorrido de un array (para cualquier tipo de array) sería: 
 ```java
 	for (int i = 0; i < x.length; i++) 
@@ -150,7 +152,11 @@ System.out.println(b==c); 	//escribe true
 :computer: Hoja de ejercicios 3
 
 ### Recorrido de un array ( FOR Y FOR-EACH)
-Al trabajar con Arrays, es común encontrar situaciones en las que cada elemento de una matriz debe examinarse, de principio a fin. Por ejemplo, para calcular la suma de los valores contenidos en una matriz, cada elemento de la matriz debe examinarse. Ejemplo: 
+Al trabajar con Arrays, es común encontrar situaciones en las que cada elemento de una matriz debe examinarse, de principio a fin. Por ejemplo, para calcular la suma de los valores contenidos en una matriz, cada elemento de la matriz debe examinarse. 
+
+<div class="page"/>
+
+Ejemplo: 
 
 - **FOR**
 ```java
@@ -274,7 +280,10 @@ La representación en UML de la clase Grupo es:
 
 ![diagrama uml de la clase grupo](img/umlgrupo.png)
 
-Con el uso de un array podemos definir también el objeto apropiado para gestionar la información de un grupo de alumnos. Ejemplo:
+Con el uso de un array podemos definir también el objeto apropiado para gestionar la información de un grupo de alumnos. 
+
+<div class="page"/>
+Ejemplo:
 
 ```java
 public class Grupo {
