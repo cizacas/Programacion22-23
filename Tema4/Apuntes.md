@@ -7,7 +7,7 @@
     - [Declaración](#declaración)
     - [Asignación](#asignación)
     - [Longitud](#longitud)
-    - [inicialización](#inicialización)
+    - [Inicialización](#inicialización)
     - [Recorrido de un array ( FOR Y FOR-EACH)](#recorrido-de-un-array--for-y-for-each)
       - [Recorrido de un array FOR-EACH](#recorrido-de-un-array-for-each)
       - [Limitaciones del ciclo FOR-EACH](#limitaciones-del-ciclo-for-each)
@@ -69,6 +69,8 @@ double[] notas = {3.0, 5.2, 8, 0.5} //Esto creará un array de 4 elementos
 ```
 >Preguntas: ¿Cuánto valdrá notas[1]? ¿Y notas[4]?
 
+Si utilizamos  **un índice** que se encuentra **fuera de rango** obtendremos  un error en tiempo de ejecución que **provoca que el programa termine de forma inesperada**, ya que  se detecta que los elementos con los índices utilizados no existen.
+
 Se pueden declarar arrays a cualquier tipo de datos (enteros, booleanos, doubles, ... e incluso objetos como se verá más adelante).
 
 La ventaja de usar arrays es que gracias a un simple **bucle for** se puede recorrer fácilmente todos los elementos de un array.
@@ -99,7 +101,7 @@ System.out.println("La media de las notas es " + media);
 ```
 :computer: Hoja de ejercicios 1
 
-### inicialización
+### Inicialización
 A un array se le puede inicializar las veces que haga falta:
 ```java
 int notas[]=new notas[16]; 
@@ -124,7 +126,7 @@ int[] a;
 int[] b=new int[]{3,4,5,6,7,8}; 
 a=b; 
 ```
-Lo que ocurre en el código anterior es que **tanto a como b hacen referencia al mismo array**. Es decir el resultado sería: 
+Lo que ocurre en el código anterior es que **tanto a como b hacen referencia al mismo array**. Es decir, el resultado sería: 
 ![mismo array](img/mismoarray.png)
 
 Esta asignación provoca que cualquier cambio en **a también cambie el array b** (ya que, de hecho, es el mismo array). Ejemplo:
@@ -170,9 +172,11 @@ for(int numeros:nums){
 
 Comienza con la palabra for al igual que el bucle for normal.
 
-En lugar de declararse e inicializar una variable contador del bucle, declara una variable que es del mismo tipo que del array, seguido de dos puntos y del nombre del array.
+En lugar de declararse e inicializar una variable contador del bucle, **declara una variable que es del mismo tipo que del array**, seguido de dos puntos y del nombre del array.
 
-En el cuerpo del bucle, puede usar la variable del bucle que creó en lugar de usar un elemento indexado del array.
+Esta variable irá tomando en cada iteración cada uno de los valores de los elementos del array y el bucle se ejecutará tantas veces como elementos existan.
+
+Es importante tener en cuenta que la variable es una copia de cada elemento, y que en el caso de que se modifique, estamos modificando una copia, no el elemento de la tabla.
 
 Se usa comúnmente para iterar sobre un array o una clase de colecciones.
 
@@ -189,6 +193,17 @@ for( int i=0; i<array.length;i++)
 	{  	tipo variable=array[i];
 		declaraciones usando variable;
 	}
+```
+
+Ejemplo:
+```java
+double sumaSueldos=0;
+double sueldos[]={1200.25,1500.34,2045.65};
+for (double sueldo:sueldos){// sueldo tomará los valores del array sueldos
+    sumaSueldos +=sueldo;
+}
+System.out.printf ("La suma de los valores aleatorios es %,.2f€",sumaSueldos);
+
 ```
 #### Limitaciones del ciclo FOR-EACH
 
@@ -208,6 +223,7 @@ for(int num: numbers)
 	}	
 }
 ```
+
 ## ARRAYS MULTIDIMENSIONALES
 Los arrays además pueden tener varias dimensiones. Entonces se habla de arrays de arrays (arrays que contienen arrays). Un uso podría ser representar datos identificables por más de un índice.
 Ejemplo:
@@ -334,7 +350,9 @@ System.out.println(a==c); //true
 System.out.println(Arrays.equals(a,c)); //true 
 ```
 - **binarySearch**
-Permite buscar un elemento de forma ultrarrápida en un array ordenado (en un array desordenado sus resultados son impredecibles). Devuelve el índice en el que está colocado el elemento. 
+Permite buscar un elemento de forma ultrarrápida en un **array ordenado** (en un array desordenado sus resultados son impredecibles). Devuelve el índice en el que está colocado el elemento. 
+es el algoritmo de **búsqueda dicotómica** también llamado **búsqueda binaria** que comprueba si la clave de búsqueda se encuentra en el elemento central de la tabla. Con esta información sabe si debe seguir buscando en la primera o segunda mitad del array. El proceso se repite con la mitad, donde es posible encontrar la clave de búsqueda, que se subdivide de nuevo en dos partes. El algoritmo continúa hasta encontrar la clave de búsqueda o hasta que no existan más elementos donde buscar.
+
 ```java
 int x[]={1,2,3,4,5,6,7,8,9,10,11,12}; 
 Arrays.sort(x); 
