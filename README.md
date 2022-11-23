@@ -22,3 +22,10 @@ Apuntes de programación del CFGS de Desarrollo de Aplicaciones Web.
   [Números aleatorios.](Tema3/Aleatorios.md)
 
   [Apuntes de la Unidad 3.](Tema3/Apuntes.md)
+
+**4. UNIDAD 4. Estructuras de almacenamiento estáticas. Arrays.**
+
+   [Fechas en java.](Tema4/FechasJava.md)
+
+  [Apuntes de la Unidad 4.](Tema4/Apuntes.md)
+
