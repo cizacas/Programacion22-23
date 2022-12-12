@@ -2,6 +2,8 @@
 
 ## ÍNDICE
 
+- [FECHAS EN JAVA](#fechas-en-java)
+  - [ÍNDICE](#índice)
   - [Localización](#localización)
   - [LocalDate](#localdate)
   - [LocalTime](#localtime)
@@ -36,6 +38,8 @@ LocalDate dateMinus = localDateOf.minusDays(7);
 System.out.println(dateMinus.toString()); // 2022-10-03
 ```
 Determinar cuál es fecha esta es anterior o posterior respecto a otra:
+<div class="page"/>
+
 ```java
 boolean isBefore = LocalDate.of(2022, 10, 10).isBefore(LocalDate.of(2022, 8, 20));
 System.out.println(isBefore); // false
@@ -72,6 +76,8 @@ LocalDateTime localDateTimeOf = LocalDateTime.of(2022, Month.AUGUST, 20, 8, 30);
 System.out.println(localDateTimeOf); // 2022-08-20T08:30
 ```
 Igual que como vimos en LocalDate y LocalTime, puedes sumar o restar fácilmente utilizando diferentes unidades de tiempo
+<div class="page"/>
+
 ```java
 LocalDateTime localDateTimePlus = localDateTimeOf.plusDays(5);
 System.out.println(localDateTimePlus); // 2022-08-25T08:30
@@ -118,6 +124,32 @@ System.out.println("Introduce la fecha con formato dd-mm-yyyy:");
 DateTimeFormatter f= DateTimeFormatter.ofPattern("dd-MM-yyyy");
 LocalDate fecha=LocalDate.parse(teclado.nextLine(), f);
 ```
+Si queremos transformar las fechas a castellano podemos utilizar el __método withLocale()__ de la clase DateTimeFormatter que toma como argumento un objeto de la __clase java.util.locale__ 
+```java
+LocalDateTime fechaConHora=LocalDateTime.now();
+DateTimeFormatter esDateFormatLargo= DateTimeFormatter
+  .ofPattern("EEEE, dd 'de' MMMM 'de' yyyy 'a las' hh:mm:ss")
+  .withLocale(new Locale("es", "ES"));
+System.out.println("Formato español (largo, localizado): " + fechaConHora.format(esDateFormatLargo));
+```
+Fíjate en dos cosas:
+
+* En primer lugar creamos el patrón que nos interesa usando EEEE para el nombre largo del día de la semana [mira la tabla de formatos](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#patterns) y "escapeamos" todos los fragmentos que no son formato, como el "de" y el "a las" usando __una comilla simple__.
+
+* Instanciamos un nuevo objeto Locale pasándole como parámetros el [código ISO 639 de idioma](https://en.wikipedia.org/wiki/ISO_639) y el [código ISO 3166 de país](https://en.wikipedia.org/wiki/ISO_3166). Así somos más explícitos (español de España, pero podría haber sido español de México o de otro país hispanohablante). Si le hubiésemos pasado tan solo el primer parámetro funcionaría con la versión más neutra del idioma (simplemente español), que en esta ocasión no tendría diferencia alguna.
+
+* Finalmente, nos faltaría saber cómo formatear la fecha con el formato actual del usuario de la aplicación, en lugar de uno arbitrario elegido por nosotros. Para ello usaremos la misma técnica, pero antes tenemos que averiguar el idioma y país del usuario actual. 
+
+```java
+LocalDateTime fechaConHora=LocalDateTime.now();
+String idiomaLocal = System.getProperty("user.language");
+String paisLocal = System.getProperty("user.country");
+System.out.println("Formato actual del sistema (" + idiomaLocal + "-" + paisLocal + "): "
+  + fechaConHora.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT)
+  .withLocale(new Locale(idiomaLocal, paisLocal)));
+```
+La única cosa nueva que tenemos aquí es que, en lugar de definir el formato manualmente, hacemos uso del [__valor SHORT del enumerado FormatStyle__](https://docs.oracle.com/javase/8/docs/api/java/time/format/FormatStyle.html) para expresar de manera genérica el formato corto de fecha y hora. En este caso no podríamos haber utilizado el formato largo (LONG) ni completo (FULL) porque necesitan la información de zona horaria, que nuestra fecha de ejemplo no tiene por ser un LocalDateTime y no un ZonedDateTime.
+
 ## EJERCICIOS
 
 :computer: Hoja de ejercicios 1
