@@ -294,7 +294,7 @@ Nos permitirá implimentar cualquier tipo de listas
 
 ![imagen listas](img/listas.png)
 
-### Clase LinKedList
+### Clase LinkedList
 
 Implementa __las interfaces List y Queue__. Tiene métodos que permiten crear listas de adición tanto por delante como por detrás (listas dobles). Desde esta clase es sencillo implementar estructuras en forma de pila o de cola.
 | Nombre | Uso | 
