@@ -322,9 +322,106 @@ En el caso de __implementar colas__,los nuevos elementos se añaden por la cola,
 
 :computer: Hoja de ejercicios de colecciones 2
 
+### Interface Set
 
+La interfaz __Set__ representa una repetición de elementos que __no pueden estar duplicados__
 
+Hereda de la interface Collection y, por tanto, posee los mismos métodos ella. La diferencia está en el uso de duplicados. 
 
+Es el __método equals__ el que se encarga de determinar __si dos objetos son duplicados__ en la lista (habrá que redefinir este método para que funcione adecuadamente). 
+
+![imagen interfaceset](img/interfaceset.png)
+
+Listas:
+* __HashSet__: Conjunto desordenado
+* __LinkedHashSet__: Conjunto desordenado que guarda el orden de inserción (mediante una lista enlazada)
+* __TreeSet__: Conjunto ordenado
+
+### Clase HashSet
+
+Implementa __listas sin duplicados__.
+Tiene los métodos de la __interfaz Collection__ 
+__Internamente una tabla de tipo hash__. Esas tablas asocian claves a conjuntos de valores.
+La naturaleza de las tablas hash hace que cuando se crean listas HashSet, no habrá valores duplicados, pero en absoluto se garantiza el orden. Es decir cada vez que llega un valor único al array se añade en una posición del mismo (la siguiente que esté libre), si llega otro con el mismo valor se añade a la lista de esa celda del array. 
+
+![imagen tablaHash](img/tablahash.png)
+
+>Pero ¿cómo compara Java los objetos de la lista para saber si son iguales? 
+
+* Utiliza el __método equals__ heredado de la clase base Object. Por ello es necesario que las clases de los objetos que se almacenarán en la tabla definan ese método. 
+* Definir también el método heredado __hashCode__. La razón es que es el hashCode es el código pensado para este tipo de lista, de hecho es el identificador en una lista HashSet, por ello los objetos que consideremos iguales en contenido deben devolver el mismo hashCode, es decir el mismo número entero. 
+  
+### clase LinkedHashSet
+
+Se trata de una clase heredera de la anterior con los mismos métodos y funciones, pero que 
+consigue mantener en el __orden en el que los datos fueron insertados__.
+Sigue necesitando __hashCode y equals__ en la clase.
+
+:computer: Hoja de ejemplos (Ejemplo 4- HashSet y LinkedHashSet)
+
+:computer: Hoja de ejercicios de colecciones 3
+
+### Interface SortedSet
+La interfaz SortedSet es la encargada de definir __una estructura en arbol__. 
+Esta interfaz deriva de __Collection__ y añade estos métodos:
+| Nombre | Uso | 
+| ------------- | ------------- |
+|first|Obtiene el primer elemento del árbol(el más pequeño)|
+|last|Obtiene el último elemento del árbol(el más grande)|
+|headSet|Obtiene un SortedSet que contendrá todos los elementos menores que el objeto o|
+|tailSet|Obtiene un SortedSet que contendrá todos los elementos mayores que el objeto o|
+|subSet|Devuelve la posición del elemento en el árbol (-1 significa que no lo ha encontrado)|
+
+#### Esturctura en Árbol. Lista ordenada
+Un árbol es una estructura en la que los datos se organizan en nodos los cuales se relacionan con dos o más nodos. En general se utilizan para ordenar datos y en ese caso de cada nodo sólo pueden colgar otros dos de modo que a la izquierda cuelgan valores menores y a la derecha valores mayores. 
+
+Al recorrer esta estructura, los datos aparecen automáticamente en el orden correcto. La adición de elementos es más lenta, pero su recorrido ordenado es mucho más eficiente. 
+
+![imagen de árbol](img/arbol.png)
+
+### Clase TreeSet
+
+Se trata de la clase que se utiliza prioritariamente para conseguir __árboles ordenados__ ya que implementa la __interfaz SortedSet__. 
+
+El problema es que los objetos tienen que poder ser comparados para determinar su orden en el árbol. Esto implica implementar __la interfaz Comparable__ de Java (está en java.lang).
+
+Esta interfaz define el __método compareTo__ que utiliza como argumento un objeto a comparar y que devuelve 0 si los objetos son iguales, un número positivo si el primero es mayor que el segundo y negativo en caso contrario. 
+
+Con lo cual __los objetos a incluir en un TreeSet deben implementar Comparable y esto les obliga a redefinir el método compareTo__
+
+:computer: Hoja de ejemplos (Ejemplo 5- TreeSet)
+
+:computer: Hoja de ejercicios de colecciones 4
+
+## Interface Map
+
+Representa una estructura de datos para almacenar pares "clave/valor“.
+Para cada clave, solo tiene un valor.
+
+principales métodos
+```java
+nombreMap.size();//Devuelve el número de elementos del Map
+nombreMap.isEmpty();// Devuelve true si no hay elementos en el Map y false si si los hay
+nombreMap.put(K clave, V valor); //Añade un elemento al Map
+nombreMap.get(K clave);//Devuelve el valor de la clave que se pasa como parámetro o null si la clave no existe
+nombreMap.clear();//Borra todos los componentes del Map
+nombreMap.remove(K clave);//Borra el par clave/valor de la clave que se pasa como parámetro
+nombreMap.containsKey( K clave);//Devuelve true si en el Map hay una clave que coincide con K
+nombreMap.ContainsValue(V valor); //Devuelve true si en el Map hay un valor que coincide con V
+nombreMap.values();// Devuelve una colección con los valores el Map
+
+```
+### Clases de la interfaz Map
+
+* __HashMap__: Los elementos que inserta en el map no tendrán un orden específico. No aceptan claves duplicadas ni valores nulos. 
+
+* __TreeMap__: El Mapa lo ordena de forma "natural". Por ejemplo, si la clave son valores enteros, los ordena de menor a mayor.
+   
+* __LinkedHashMap__: Inserta en el Map los elementos en el orden en el que se van insertando; es decir, que no tiene una ordenación de los elementos como tal, por lo que esta clase realiza las búsquedas de los elementos de forma más lenta que las demás clases. 
+
+:computer: Hoja de ejemplos (Ejemplo 6- de las clases de la interfaz Map)
+
+:computer: Hoja de ejercicios de colecciones 5
 
 
 
