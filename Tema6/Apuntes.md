@@ -1,5 +1,30 @@
 # Estructuras de almacenmiento dinámicas - colecciones
 ## Índice
+- [Estructuras de almacenmiento dinámicas - colecciones](#estructuras-de-almacenmiento-dinámicas---colecciones)
+  - [Índice](#índice)
+  - [Introducción](#introducción)
+  - [Clasificación](#clasificación)
+  - [Las interfaces](#las-interfaces)
+  - [Tipos de datos parametrizados o genéricos](#tipos-de-datos-parametrizados-o-genéricos)
+    - [Clases con parámetros genéricos](#clases-con-parámetros-genéricos)
+    - [Parámetros genéricos limitados](#parámetros-genéricos-limitados)
+    - [Métodos genéricos](#métodos-genéricos)
+    - [Comodines o wildcards](#comodines-o-wildcards)
+    - [Cosas que no se pueden hacer con parámetros genéricos](#cosas-que-no-se-pueden-hacer-con-parámetros-genéricos)
+  - [Interface collection](#interface-collection)
+    - [Interface List](#interface-list)
+    - [Interface Queue](#interface-queue)
+    - [Clase ArrayList](#clase-arraylist)
+    - [Clase LinkedList](#clase-linkedlist)
+    - [Interface Set](#interface-set)
+    - [Clase HashSet](#clase-hashset)
+    - [clase LinkedHashSet](#clase-linkedhashset)
+    - [Interface SortedSet](#interface-sortedset)
+      - [Esturctura en Árbol. Lista ordenada](#esturctura-en-árbol-lista-ordenada)
+    - [Clase TreeSet](#clase-treeset)
+  - [Interface Map](#interface-map)
+    - [Clases de la interfaz Map](#clases-de-la-interfaz-map)
+
 ## Introducción
 __Las colecciones__ son estructuras dinámicas. Esto quiere decir que pueden aumentar o disminuir su tamaño dependiendo de los elementos que almacenan en tiempo de ejecución.
 
